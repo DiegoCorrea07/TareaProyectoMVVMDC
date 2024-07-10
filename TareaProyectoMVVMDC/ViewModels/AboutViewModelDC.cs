@@ -19,11 +19,11 @@ namespace TareaproyectoMVVMDC.ViewModels
             "mejorando mis habilidades para ofrecer soluciones de alta calidad. Fuera " +
             "del mundo del desarrollo, me encanta explorar nuevas tecnologías, leer " +
             "libros y disfrutar de actividades al aire libre como jugar fútbol.";
-        public ICommand ShowMoreInfoCommand { get; }
+        public ICommand ShowMoreInfoCommandDC { get; }
 
         public AboutViewModelDC()
         {
-            ShowMoreInfoCommand = new AsyncRelayCommand(ShowMoreInfo);
+            ShowMoreInfoCommandDC = new AsyncRelayCommand(ShowMoreInfo);
         }
 
         async Task ShowMoreInfo() =>

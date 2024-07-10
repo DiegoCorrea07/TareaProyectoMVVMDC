@@ -29,7 +29,7 @@
                        VerticalOptions="Center"
                        FontSize="Title"
                        FontAttributes="Bold"
-                       Margin="10,0,0,0" />
+                       Margin="10,0,0,10" />
                 </StackLayout>
             </FlexLayout>
 
@@ -39,7 +39,7 @@
                VerticalOptions="CenterAndExpand" />
 
             <!-- Botón -->
-            <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
+            <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommandDC}" />
         </VerticalStackLayout>
     </ScrollView>
 

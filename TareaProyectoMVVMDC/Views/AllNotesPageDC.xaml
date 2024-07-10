@@ -11,16 +11,17 @@
 
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding NewCommand}" IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
+        <ToolbarItem Text="Add" Command="{Binding NewCommandDC}" IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
     </ContentPage.ToolbarItems>
+    
 
     <!-- Display notes in a list -->
     <ScrollView>
         <CollectionView x:Name="notesCollection"
-                                    ItemsSource="{Binding AllNotes}"
+                                    ItemsSource="{Binding AllNotesDC}"
                                     Margin="20"
                                     SelectionMode="Single"
-                                    SelectionChangedCommand="{Binding SelectNoteCommand}"
+                                    SelectionChangedCommand="{Binding SelectNoteCommandDC}"
                                     SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
             <!-- Designate how the collection of items are laid out -->
             <CollectionView.ItemsLayout>

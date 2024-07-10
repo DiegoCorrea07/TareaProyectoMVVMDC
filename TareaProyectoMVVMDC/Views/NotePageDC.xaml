@@ -15,11 +15,11 @@
 
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Save"
-                    Command="{Binding SaveCommand}"/>
+                    Command="{Binding SaveCommandDC}"/>
 
             <Button Grid.Column="1"
                     Text="Delete"
-                    Command="{Binding DeleteCommand}"/>
+                    Command="{Binding DeleteCommandDC}"/>
 
         </Grid>
     </VerticalStackLayout>

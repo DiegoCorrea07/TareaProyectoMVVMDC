@@ -26,21 +26,21 @@ namespace TareaproyectoMVVMDC.ViewModels
 
         public string Identifier => _noteDC.Filename;
 
-        public ICommand SaveCommand { get; private set; }
-        public ICommand DeleteCommand { get; private set; }
+        public ICommand SaveCommandDC { get; private set; }
+        public ICommand DeleteCommandDC { get; private set; }
 
         public NoteViewModelDC()
         {
             _noteDC = new Models.NoteDC();
-            SaveCommand = new AsyncRelayCommand(Save);
-            DeleteCommand = new AsyncRelayCommand(Delete);
+            SaveCommandDC = new AsyncRelayCommand(Save);
+            DeleteCommandDC = new AsyncRelayCommand(Delete);
         }
 
         public NoteViewModelDC(Models.NoteDC noteDC)
         {
             _noteDC = noteDC;
-            SaveCommand = new AsyncRelayCommand(Save);
-            DeleteCommand = new AsyncRelayCommand(Delete);
+            SaveCommandDC = new AsyncRelayCommand(Save);
+            DeleteCommandDC = new AsyncRelayCommand(Delete);
         }
 
         private async Task Save()
