@@ -6,40 +6,41 @@
     <ContentPage.BindingContext>
         <viewModels:AboutViewModelDC />
     </ContentPage.BindingContext>
-
+    
     <!-- Diseño de la página -->
-    <VerticalStackLayout Spacing="20" Margin="15">
-        <!-- Icono representativo -->
-        <Frame WidthRequest="100" HeightRequest="100" CornerRadius="50" BorderColor="OrangeRed" Padding="0">
-            <Image Source="iconperfil.png"
-               Aspect="AspectFill"
-               HeightRequest="100" />
-        </Frame>
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Margin="15">
+            <!-- Icono representativo -->
+            <Frame WidthRequest="100" HeightRequest="100" CornerRadius="50" BorderColor="OrangeRed" Padding="0">
+                <Image Source="iconperfil.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="100" />
+            </Frame>
 
-        <FlexLayout Direction="Column" AlignItems="Start" Padding="10">
+            <!-- Información personal -->
+            <FlexLayout Direction="Column" AlignItems="Start" Padding="10">
+                <!-- Nombre -->
+                <StackLayout Orientation="Horizontal" Margin="5">
+                    <Image Source="run.png"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       VerticalOptions="Center" />
+                    <Label Text="Diego Correa"
+                       VerticalOptions="Center"
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       Margin="10,0,0,0" />
+                </StackLayout>
+            </FlexLayout>
 
-            <!-- Nombre -->
-            <StackLayout Orientation="Horizontal" Margin="5">
-                <Image Source="run.png"
-                   WidthRequest="40"
-                   HeightRequest="40"
-                   VerticalOptions="Center">
+            <!-- Mensaje -->
+            <Label Text="{Binding Message}"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
 
-                </Image>
-                <Label Text="Diego Correa"
-                   VerticalOptions="Center"
-                   FontSize="Title"
-                   FontAttributes="Bold"
-                   Margin="10,0,0,0" />
-            </StackLayout>
-        </FlexLayout>
-
-
-        <!-- Descripción personal -->
-        <Label Text="¡Hola! Soy un apasionado estudiante en Ingeniería de Software que disfruta creando aplicaciones innovadoras y útiles. Con experiencia en diversas tecnologías de desarrollo, estoy constantemente aprendiendo y mejorando mis habilidades para ofrecer soluciones de alta calidad. Fuera del mundo del desarrollo, me encanta explorar nuevas tecnologías, leer libros y disfrutar de actividades al aire libre como jugar fútbol." />
-
-        <!-- Botón para obtener más información -->
-        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
-    </VerticalStackLayout>
+            <!-- Botón -->
+            <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
